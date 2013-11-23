@@ -6,3 +6,7 @@
 .navbar-static-top .container {
   width: inherit;
 }
+
+.panel-pane {
+  margin-bottom: 20px;
+}

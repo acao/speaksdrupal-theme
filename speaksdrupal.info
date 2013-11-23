@@ -57,4 +57,4 @@ settings[toggle_search] = 1
 settings[cdn_bootstrap] = 1
 settings[bootstrap_cdn] = 3.0.2
 
-;exclude[css][] = 'sites/all/modules/radix_layouts/radix_layouts.css'
+exclude[css][] = 'sites/all/modules/radix_layouts/radix_layouts.css'

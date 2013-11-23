@@ -46,6 +46,14 @@ function  theme_bootstrap_affix_render_region($vars) {
     return;
   }
   $settings = $vars['settings'];
+  $settings['region_id'] = $vars['region_id'];
+
+  $jsdata = array(
+    'file' => drupal_get_path('theme', 'speaksdrupal') .'/panels/styles/bootstrap_affix/bootstrap_affix.js',
+    'setting' => $settings,
+    );
+
+  drupal_add_js($data = $jsdata);
   return theme('bootstrap_affix_theme_region', array('content' => $content, 'settings' => $settings));
 }
 
@@ -62,12 +70,12 @@ function bootstrap_affix_region_settings_form($settings){
       '#default_value' => (isset($settings['affix_class'])) ? $settings['affix_class'] : 'affix',
       );
     $form['offset_top'] = array(
-      '#type' => 'text',
+      '#type' => 'textfield',
       '#title' => t('Offset Top (px)'),
       '#default_value' => (!empty($settings['offset_top'])) ? $settings['offset_top'] : '',
     );
      $form['offset_bottom'] = array(
-      '#type' => 'text',
+      '#type' => 'textfield',
       '#title' => t('Offset Bottom (px)'),
       '#default_value' => (!empty($settings['offset_bottom'])) ? $settings['offset_bottom'] : '',
     );

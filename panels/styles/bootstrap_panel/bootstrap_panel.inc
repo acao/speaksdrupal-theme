@@ -62,6 +62,12 @@ function bootstrap_panel_settings_form($settings) {
     '#title' => t('Use Footer'),
     '#default_value' => (isset($settings['use_footer'])) ? $settings['use_footer'] : 0,
   );
+  $form['panel_body'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use Panel Body'),
+    '#description' => t('Wrap the panel content in a panel-body class. Remove this if you are including a table, list or menu for better styling.'),
+    '#default_value' => (isset($settings['panel_body'])) ? $settings['panel_body'] : 1,
+  );
   $form['footer_content'] = array(
     '#type' => 'textfield',
     '#title' => t('Footer Content'),
@@ -93,6 +99,12 @@ function bootstrap_panel_region_settings_form($settings) {
     '#type' => 'checkbox',
     '#title' => t('Use Title'),
     '#default_value' => (isset($settings['use_title'])) ? $settings['use_title'] : 1,
+  );
+  $form['panel_body'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use Panel Body'),
+    '#description' => t('Wrap the panel content in a panel-body class. Remove this if you are including a table, list or menu for better styling.'),
+    '#default_value' => (isset($settings['panel_body'])) ? $settings['panel_body'] : 1,
   );
   $form['context_class'] = array(
     '#type' => 'select',
